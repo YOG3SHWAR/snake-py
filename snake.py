@@ -41,13 +41,14 @@ def move():
     update()
     ontimer(move, 100)
 
-    hideturtle()
-    tracer(False)
-    listen()
-    onkey(lambda: changes(10, 0), 'Right')
-    onkey(lambda: changes(-10, 0), 'Left')
-    onkey(lambda: changes(0, 10), 'Up')
-    onkey(lambda: changes(0, -10), 'Down')
 
-    move()
-    done()
+hideturtle()
+tracer(False)
+listen()
+onkey(lambda: changes(10, 0), 'Right')
+onkey(lambda: changes(-10, 0), 'Left')
+onkey(lambda: changes(0, 10), 'Up')
+onkey(lambda: changes(0, -10), 'Down')
+
+move()
+done()
