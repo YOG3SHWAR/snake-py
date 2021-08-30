@@ -1,6 +1,5 @@
 from turtle import *
 from random import randrange
-from freegames import square
 from freegames import square, vector
 
 food = vector(0, 0)
@@ -39,7 +38,7 @@ def move():
 
     square(food.x, food.y, 9, 'red')
     update()
-    ontimer(move, 100)
+    ontimer(move, 200)
 
 
 hideturtle()
@@ -49,6 +48,5 @@ onkey(lambda: change(10, 0), 'Right')
 onkey(lambda: change(-10, 0), 'Left')
 onkey(lambda: change(0, 10), 'Up')
 onkey(lambda: change(0, -10), 'Down')
-
 move()
 done()
