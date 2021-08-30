@@ -24,7 +24,7 @@ def move():
         square(head.x, head.y, 9, 'red')
         update()
         return
-    snake.append()
+    snake.append(head)
 
     if head == food:
         print('snake', len(snake))
@@ -45,10 +45,10 @@ def move():
 hideturtle()
 tracer(False)
 listen()
-onkey(lambda: changes(10, 0), 'Right')
-onkey(lambda: changes(-10, 0), 'Left')
-onkey(lambda: changes(0, 10), 'Up')
-onkey(lambda: changes(0, -10), 'Down')
+onkey(lambda: change(10, 0), 'Right')
+onkey(lambda: change(-10, 0), 'Left')
+onkey(lambda: change(0, 10), 'Up')
+onkey(lambda: change(0, -10), 'Down')
 
 move()
 done()
